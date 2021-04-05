@@ -13,17 +13,17 @@ namespace Bowling_game_kata
         public static void addInputResultsToBowlingGame(BowlingGame game, string input)
         {
             int inputIterator = 0;
-            int round = 0;
-            while (round < 12 && inputIterator < input.Length)
+            int frame = 0;
+            while (frame < 12 && inputIterator < input.Length)
             { 
                 if (input[inputIterator] == ' ')
                 {
-                    ++round;
+                    ++frame;
                 }
                 else
                 {
                     int pinsTakenDownInRoll = translateInputCharToInt(ref input, inputIterator);
-                    game.addThrowToRound(round, pinsTakenDownInRoll);
+                    game.addThrowToFrame(frame, pinsTakenDownInRoll);
                 }
                 inputIterator++;
             }

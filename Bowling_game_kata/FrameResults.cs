@@ -5,9 +5,9 @@ using System.Diagnostics;
 
 namespace Bowling_game_kata
 {
-    class RoundResult
+    class FrameResults
     {
-        public RoundResult() {
+        public FrameResults() {
             for (int i = 0; i < 2; ++i)
             {
                 m_pinsTakenDownInRoll[i] = 0;
@@ -45,7 +45,7 @@ namespace Bowling_game_kata
             return result;
         }
 
-        public int getSumOfPinsTakenDown() // should it be a part of this class?
+        public int getSumOfPinsTakenDown()
         {
             return m_pinsTakenDownInRoll[0] + m_pinsTakenDownInRoll[1];
         }

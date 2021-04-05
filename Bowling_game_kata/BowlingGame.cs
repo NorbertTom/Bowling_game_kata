@@ -9,16 +9,16 @@ namespace Bowling_game_kata
     {
         public BowlingGame() {
             for (int i = 0; i < 12; i++)
-                m_roundResults[i] = new RoundResult();
+                m_frameResults[i] = new FrameResults();
         }
 
-        public RoundResult addThrowToRound(int roundNr, int pinsTakenDown)
+        public FrameResults addThrowToFrame(int frameNr, int pinsTakenDown)
         {
-            Debug.Assert(roundNr < 12, "roundNr cannot be higher than 11");
+            Debug.Assert(frameNr < 12, "roundNr cannot be higher than 11");
 
-            RoundResult round = m_roundResults[roundNr];
-            round.addThrow(pinsTakenDown);
-            return round;
+            FrameResults frame = m_frameResults[frameNr];
+            frame.addThrow(pinsTakenDown);
+            return frame;
         }
 
         public int countScore()
@@ -26,40 +26,40 @@ namespace Bowling_game_kata
             int totalScore = 0;
             for (int round = 0; round<10; round++)
             {
-                totalScore += countRoundsScore(round);
+                totalScore += countFramesScore(round);
             }
             return totalScore;
         }
 
-        private int countRoundsScore(int round)
+        private int countFramesScore(int frame)
         {
-            int roundsScore = m_roundResults[round].getSumOfPinsTakenDown();
-            if (m_roundResults[round].isSpare())
+            int roundsScore = m_frameResults[frame].getSumOfPinsTakenDown();
+            if (m_frameResults[frame].isSpare())
             {
-                roundsScore += m_roundResults[round + 1].getPinsTakenDownInRoll(0);
+                roundsScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(0);
             }
-            else if (m_roundResults[round].isStrike())
+            else if (m_frameResults[frame].isStrike())
             {
-                roundsScore += countStrikeExtraScore(round);
+                roundsScore += countStrikeExtraScore(frame);
             } 
             return roundsScore;
         }
 
-        private int countStrikeExtraScore(int round)
+        private int countStrikeExtraScore(int frame)
         {
             int extraScore = 0;
-            extraScore += m_roundResults[round + 1].getPinsTakenDownInRoll(0);
+            extraScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(0);
             if (extraScore == 10)
             {
-                extraScore += m_roundResults[round + 2].getPinsTakenDownInRoll(0);
+                extraScore += m_frameResults[frame + 2].getPinsTakenDownInRoll(0);
             }
             else
             {
-                extraScore += m_roundResults[round + 1].getPinsTakenDownInRoll(1);
+                extraScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(1);
             }
             return extraScore;
         }
 
-        private RoundResult[] m_roundResults = new RoundResult[12];
+        private FrameResults[] m_frameResults = new FrameResults[12];
     }
 }
