@@ -9,18 +9,18 @@ namespace Bowling_game_kata_tests
         public void addingThrowResults()
         {
             Bowling_game_kata.BowlingGame game = new Bowling_game_kata.BowlingGame();
-            int roundNr = 0;
+            int frameNr = 0;
             int pinsTakenDown = 5;
-            Bowling_game_kata.FrameResults round0 = new Bowling_game_kata.FrameResults();
-            round0 = game.addThrowToFrame(roundNr, pinsTakenDown);
-            Assert.Equal(pinsTakenDown, round0.getSumOfPinsTakenDown());
+            Bowling_game_kata.FrameResults frame0 = new Bowling_game_kata.FrameResults();
+            frame0 = game.addThrowToFrame(frameNr, pinsTakenDown);
+            Assert.Equal(pinsTakenDown, frame0.getSumOfPinsTakenDown());
 
-            roundNr = 5;
+            frameNr = 5;
             pinsTakenDown = 9;
-            Bowling_game_kata.FrameResults round5 = new Bowling_game_kata.FrameResults();
-            round5 = game.addThrowToFrame(roundNr, pinsTakenDown);
-            Assert.Equal(pinsTakenDown, round5.getSumOfPinsTakenDown());
-            Assert.Equal(5, round0.getSumOfPinsTakenDown());
+            Bowling_game_kata.FrameResults frame5 = new Bowling_game_kata.FrameResults();
+            frame5 = game.addThrowToFrame(frameNr, pinsTakenDown);
+            Assert.Equal(pinsTakenDown, frame5.getSumOfPinsTakenDown());
+            Assert.Equal(5, frame0.getSumOfPinsTakenDown());
         }
 
         [Fact]
