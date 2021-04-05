@@ -8,6 +8,7 @@ namespace Bowling_game_kata
     class BowlingGame
     {
         public BowlingGame() {
+            m_frameResults = new FrameResults[12];
             for (int i = 0; i < 12; i++)
                 m_frameResults[i] = new FrameResults();
         }
@@ -61,6 +62,6 @@ namespace Bowling_game_kata
             return extraScore;
         }
 
-        private FrameResults[] m_frameResults = new FrameResults[12];
+        private FrameResults[] m_frameResults;
     }
 }

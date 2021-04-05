@@ -8,6 +8,8 @@ namespace Bowling_game_kata
     class FrameResults
     {
         public FrameResults() {
+
+            m_pinsTakenDownInRoll = new int[2];
             for (int i = 0; i < 2; ++i)
             {
                 m_pinsTakenDownInRoll[i] = 0;
@@ -16,7 +18,7 @@ namespace Bowling_game_kata
 
         public void addThrow(int pinsScored)
         {
-            Debug.Assert(m_nrOfThrows < 2, "m_nrOfThrows should never exceed 2");
+            Debug.Assert(m_nrOfThrows < 2, "m_nrOfThrows should never exceed 1");
          
             int currentThrow = m_nrOfThrows;
             m_pinsTakenDownInRoll[currentThrow] = pinsScored;
@@ -52,13 +54,13 @@ namespace Bowling_game_kata
 
         public int getPinsTakenDownInRoll(int rollNr)
         {
-            Debug.Assert(rollNr < 3, "Invalid rollNr");
+            Debug.Assert(rollNr < 2, "Invalid rollNr");
             Debug.Assert(rollNr >= 0, "Invalid rollNr");
 
             return m_pinsTakenDownInRoll[rollNr];
         }
 
-        private int[] m_pinsTakenDownInRoll = new int[2];
+        private int[] m_pinsTakenDownInRoll;
         private int m_nrOfThrows = 0;
     }
 }

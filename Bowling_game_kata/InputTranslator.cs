@@ -33,7 +33,7 @@ namespace Bowling_game_kata
 
             int result = 0;
             char inputChar = input[currentPosition];
-            if (inputChar > 48 && inputChar < 58)
+            if (isCharacterAsciiNumber(inputChar))
             {
                 result = (int)inputChar - 48;
             }
@@ -50,6 +50,16 @@ namespace Bowling_game_kata
             else 
             {
                 Debug.Assert(false, "Invalid char");
+            }
+            return result;
+        }
+
+        private static bool isCharacterAsciiNumber(char character)
+        {
+            bool result = false;
+            if (character > 48 && character < 58)
+            {
+                result = true;
             }
             return result;
         }
