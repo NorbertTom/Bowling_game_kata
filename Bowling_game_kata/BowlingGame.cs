@@ -24,25 +24,25 @@ namespace Bowling_game_kata
         public int countScore()
         {
             int totalScore = 0;
-            for (int round = 0; round<10; round++)
+            for (int frame = 0; frame<10; frame++)
             {
-                totalScore += countFramesScore(round);
+                totalScore += countFramesScore(frame);
             }
             return totalScore;
         }
 
         private int countFramesScore(int frame)
         {
-            int roundsScore = m_frameResults[frame].getSumOfPinsTakenDown();
+            int framesScore = m_frameResults[frame].getSumOfPinsTakenDown();
             if (m_frameResults[frame].isSpare())
             {
-                roundsScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(0);
+                framesScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(0);
             }
             else if (m_frameResults[frame].isStrike())
             {
-                roundsScore += countStrikeExtraScore(frame);
+                framesScore += countStrikeExtraScore(frame);
             } 
-            return roundsScore;
+            return framesScore;
         }
 
         private int countStrikeExtraScore(int frame)
