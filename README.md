@@ -1,5 +1,9 @@
 # Bowling_game_kata
 
+Kata wrote based on description provided on <a href="https://codingdojo.org/kata/Bowling/">https://codingdojo.org/kata/Bowling/</a>
+
+<img src = "https://github.com/NorbertTom/Bowling_game_kata/raw/master/imgs/screenshot.jpg" alt = "Screenshot" width = "400"><br>
+
 ## How to run and build the project
 <br>
 To run the project you need Visual Studio 2019 with .NET Core 3.1 Framework installed.
