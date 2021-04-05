@@ -13,4 +13,4 @@ After that you can run it by hitting F5 or open <i>Debug</i> and choose <i>Start
 ## How to run tests
 <br>
 To run tests you need xUnit installed with your Visual Studio. It is included in <i>.NET Core cross-platform development</i> workload.
-With that installed you need to open <i>Test</i> and choose <i>Run All Tests</i>.
+With that installed you need to open Bowling_game_kata.sln solution file, open <i>Test</i> and choose <i>Run All Tests</i>.
