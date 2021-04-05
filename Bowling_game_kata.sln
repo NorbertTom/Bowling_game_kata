@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowling_game_kata", "Bowling_game_kata\Bowling_game_kata.csproj", "{514F95A5-7EE0-485E-9FA3-115D381F243B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bowling_game_kata_tests", "Bowling_game_kata_tests\Bowling_game_kata_tests.csproj", "{3CB62DF8-2D82-41AC-B624-11FBFACB33DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{514F95A5-7EE0-485E-9FA3-115D381F243B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514F95A5-7EE0-485E-9FA3-115D381F243B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514F95A5-7EE0-485E-9FA3-115D381F243B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514F95A5-7EE0-485E-9FA3-115D381F243B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB62DF8-2D82-41AC-B624-11FBFACB33DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB62DF8-2D82-41AC-B624-11FBFACB33DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB62DF8-2D82-41AC-B624-11FBFACB33DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB62DF8-2D82-41AC-B624-11FBFACB33DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {867B7BA3-56FE-4E51-95ED-16F8F76D6A26}
+	EndGlobalSection
+EndGlobal
