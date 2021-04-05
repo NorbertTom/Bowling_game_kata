@@ -1,5 +1,6 @@
 ﻿using System;
 using Xunit;
+using Bowling_game_kata;
 
 namespace Bowling_game_kata_tests
 {
@@ -8,16 +9,16 @@ namespace Bowling_game_kata_tests
         [Fact]
         public void addingThrowResults()
         {
-            Bowling_game_kata.BowlingGame game = new Bowling_game_kata.BowlingGame();
+            BowlingGame game = new BowlingGame();
             int frameNr = 0;
             int pinsTakenDown = 5;
-            Bowling_game_kata.FrameResults frame0 = new Bowling_game_kata.FrameResults();
+            FrameResults frame0 = new FrameResults();
             frame0 = game.addThrowToFrame(frameNr, pinsTakenDown);
             Assert.Equal(pinsTakenDown, frame0.getSumOfPinsTakenDown());
 
             frameNr = 5;
             pinsTakenDown = 9;
-            Bowling_game_kata.FrameResults frame5 = new Bowling_game_kata.FrameResults();
+            FrameResults frame5 = new FrameResults();
             frame5 = game.addThrowToFrame(frameNr, pinsTakenDown);
             Assert.Equal(pinsTakenDown, frame5.getSumOfPinsTakenDown());
             Assert.Equal(5, frame0.getSumOfPinsTakenDown());
@@ -26,7 +27,7 @@ namespace Bowling_game_kata_tests
         [Fact]
         public void countScore()
         {
-            Bowling_game_kata.BowlingGame game = new Bowling_game_kata.BowlingGame();
+            BowlingGame game = new BowlingGame();
             Assert.Equal(0, game.countScore());
 
             game.addThrowToFrame(0, 7);
@@ -84,14 +85,14 @@ namespace Bowling_game_kata_tests
         [Fact]
         public void countScoreKataExamples()
         {
-            Bowling_game_kata.BowlingGame gameFullOfStrikes = new Bowling_game_kata.BowlingGame();
+            BowlingGame gameFullOfStrikes = new BowlingGame();
             for (int i = 0; i < 12; i++)
             {
                 gameFullOfStrikes.addThrowToFrame(i, 10);
             }
             Assert.Equal(300, gameFullOfStrikes.countScore());
 
-            Bowling_game_kata.BowlingGame gameFullOfSpares = new Bowling_game_kata.BowlingGame();
+            BowlingGame gameFullOfSpares = new BowlingGame();
             for (int i = 0; i < 12; i++)
             {
                 gameFullOfSpares.addThrowToFrame(i, 5);
@@ -99,7 +100,7 @@ namespace Bowling_game_kata_tests
             }
             Assert.Equal(150, gameFullOfSpares.countScore());
 
-            Bowling_game_kata.BowlingGame gameFullOf9pts = new Bowling_game_kata.BowlingGame();
+            BowlingGame gameFullOf9pts = new BowlingGame();
             for (int i = 0; i < 12; i++)
             {
                 gameFullOf9pts.addThrowToFrame(i, 9);

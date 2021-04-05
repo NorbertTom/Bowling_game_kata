@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Bowling_game_kata;
 
 namespace Bowling_game_kata_tests
 {
@@ -8,7 +9,7 @@ namespace Bowling_game_kata_tests
         [Fact]
         public void addFrameResultAndGetters()
         {
-            Bowling_game_kata.FrameResults frameResult = new Bowling_game_kata.FrameResults();
+            FrameResults frameResult = new FrameResults();
             Assert.Equal(0, frameResult.getSumOfPinsTakenDown());
 
             frameResult.addThrow(5);
@@ -26,9 +27,9 @@ namespace Bowling_game_kata_tests
         [Fact]
         public void strikesAndSpares()
         {
-            Bowling_game_kata.FrameResults frame1 = new Bowling_game_kata.FrameResults();
-            Bowling_game_kata.FrameResults frame2 = new Bowling_game_kata.FrameResults();
-            Bowling_game_kata.FrameResults frame3 = new Bowling_game_kata.FrameResults();
+            FrameResults frame1 = new FrameResults();
+            FrameResults frame2 = new FrameResults();
+            FrameResults frame3 = new FrameResults();
             Assert.False(frame1.isSpare());
             Assert.False(frame1.isStrike());
 
