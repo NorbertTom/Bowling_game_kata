@@ -18,7 +18,7 @@ namespace Bowling_game_kata
             string userInput = Console.ReadLine();
             
             BowlingGame game = new BowlingGame();
-            InputTranslator.addInputResultsToBowlingGame(game, userInput);
+            InputToGameSender.sendInputResultsToBowlingGame(game, userInput);
             int score = game.countScore();
             Console.WriteLine("Score of the game is: " + score);
         }

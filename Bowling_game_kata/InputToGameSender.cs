@@ -5,10 +5,10 @@ using System.Diagnostics;
 
 namespace Bowling_game_kata
 {
-    static class InputTranslator
+    static class InputToGameSender
     {
 
-        public static void addInputResultsToBowlingGame(BowlingGame game, string input)
+        public static void sendInputResultsToBowlingGame(BowlingGame game, string input)
         {
             int inputIterator = 0;
             int frame = 0;
