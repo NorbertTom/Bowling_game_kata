@@ -6,7 +6,7 @@ namespace Bowling_game_kata
     { 
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter the results. Please use numbers as quantity of pins taken down in a roll");
+            Console.WriteLine("Please enter the results. Please use numbers as a quantity of pins taken down in a roll");
             Console.WriteLine("Please use - in case no pin was taken down");
             Console.WriteLine("Please use / in case of a spare");
             Console.WriteLine("Please use X in case of a strike");

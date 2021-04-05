@@ -24,38 +24,39 @@ namespace Bowling_game_kata
         public int countScore()
         {
             int totalScore = 0;
-            for (int frame = 0; frame<10; frame++)
+            for (int frameNr = 0; frameNr<10; frameNr++)
             {
-                totalScore += countFramesScore(frame);
+                totalScore += countFramesScore(frameNr);
             }
             return totalScore;
         }
 
-        private int countFramesScore(int frame)
+        private int countFramesScore(int frameNr)
         {
-            int framesScore = m_frameResults[frame].getSumOfPinsTakenDown();
-            if (m_frameResults[frame].isSpare())
+            FrameResults frame = m_frameResults[frameNr];
+            int framesScore = frame.getSumOfPinsTakenDown();
+            if (frame.isSpare())
             {
-                framesScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(0);
+                framesScore += m_frameResults[frameNr + 1].getPinsTakenDownInRoll(0);
             }
-            else if (m_frameResults[frame].isStrike())
+            else if (frame.isStrike())
             {
-                framesScore += countStrikeExtraScore(frame);
+                framesScore += countStrikeExtraScore(frameNr);
             } 
             return framesScore;
         }
 
-        private int countStrikeExtraScore(int frame)
+        private int countStrikeExtraScore(int frameNr)
         {
             int extraScore = 0;
-            extraScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(0);
+            extraScore += m_frameResults[frameNr + 1].getPinsTakenDownInRoll(0);
             if (extraScore == 10)
             {
-                extraScore += m_frameResults[frame + 2].getPinsTakenDownInRoll(0);
+                extraScore += m_frameResults[frameNr + 2].getPinsTakenDownInRoll(0);
             }
             else
             {
-                extraScore += m_frameResults[frame + 1].getPinsTakenDownInRoll(1);
+                extraScore += m_frameResults[frameNr + 1].getPinsTakenDownInRoll(1);
             }
             return extraScore;
         }

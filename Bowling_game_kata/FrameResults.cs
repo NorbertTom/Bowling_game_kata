@@ -16,9 +16,9 @@ namespace Bowling_game_kata
 
         public void addThrow(int pinsScored)
         {
+            Debug.Assert(m_nrOfThrows < 2, "m_nrOfThrows should never exceed 2");
+         
             int currentThrow = m_nrOfThrows;
-            Debug.Assert(currentThrow < 2, "m_nrOfThrows should never exceed 2");
-
             m_pinsTakenDownInRoll[currentThrow] = pinsScored;
             ++m_nrOfThrows;
             
@@ -28,7 +28,7 @@ namespace Bowling_game_kata
         public bool isSpare()
         {
             bool result = false;
-            if (getSumOfPinsTakenDown() == 10 && m_pinsTakenDownInRoll[0] != 10 )
+            if (getSumOfPinsTakenDown() == 10 && m_pinsTakenDownInRoll[0] != 10)
             {
                 result = true;
             }
@@ -56,11 +56,6 @@ namespace Bowling_game_kata
             Debug.Assert(rollNr >= 0, "Invalid rollNr");
 
             return m_pinsTakenDownInRoll[rollNr];
-        }
-
-        public int getNrOfThrows()
-        {
-            return m_nrOfThrows;
         }
 
         private int[] m_pinsTakenDownInRoll = new int[2];

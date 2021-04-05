@@ -10,17 +10,14 @@ namespace Bowling_game_kata_tests
         {
             Bowling_game_kata.FrameResults frameResult = new Bowling_game_kata.FrameResults();
             Assert.Equal(0, frameResult.getSumOfPinsTakenDown());
-            Assert.Equal(0, frameResult.getNrOfThrows());
 
             frameResult.addThrow(5);
             Assert.Equal(5, frameResult.getSumOfPinsTakenDown());
-            Assert.Equal(1, frameResult.getNrOfThrows());
             Assert.Equal(5, frameResult.getPinsTakenDownInRoll(0));
             Assert.Equal(0, frameResult.getPinsTakenDownInRoll(1));
 
             frameResult.addThrow(2);
             Assert.Equal(7, frameResult.getSumOfPinsTakenDown());
-            Assert.Equal(2, frameResult.getNrOfThrows());
             Assert.Equal(5, frameResult.getPinsTakenDownInRoll(0));
             Assert.Equal(2, frameResult.getPinsTakenDownInRoll(1));
 
