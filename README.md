@@ -1,6 +1,6 @@
 # Bowling_game_kata
 
-Kata wrote based on description provided on <a href="https://codingdojo.org/kata/Bowling/">https://codingdojo.org/kata/Bowling/</a>
+Kata written based on description provided on <a href="https://codingdojo.org/kata/Bowling/">https://codingdojo.org/kata/Bowling/</a>
 
 <img src = "https://github.com/NorbertTom/Bowling_game_kata/raw/master/imgs/screenshot.jpg" alt = "Screenshot"><br>
 
